@@ -1,4 +1,4 @@
-package com.sellfeed.member;
+package com.sellfeed.product;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.slf4j.Logger;
@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MemberDao {
-	Logger logger = LoggerFactory.getLogger(MemberDao.class);
+public class ProductDao {
+	Logger logger = LoggerFactory.getLogger(ProductLogic.class);
 	@Autowired
 	public SqlSessionTemplate sqlSessionTemplate = null;
 }

@@ -1,4 +1,4 @@
-package com.sellfeed.member;
+package com.sellfeed.aucProc;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MemberLogic {
-	Logger logger = LoggerFactory.getLogger(MemberLogic.class);
+public class AucProcLogic {
+	Logger logger = LoggerFactory.getLogger(AucProcLogic.class);
 	@Autowired
-	public MemberDao memberDao = null;
+	public AucProcDao aucProcDao = null; 
 }
