@@ -26,7 +26,8 @@ public class ProductDao {
 //¡Ú	Insert
 	public int ProductIns(Map<String, Object> pMap) {
 		logger.info("ProductDao| Call productIns");
-		return 0;
+		result = sqlSessionTemplate.selectOne("productIns",pMap);
+		return result;
 	}
 //¡Ú	Update
 	public int productUpd(Map<String, Object> pMap) {
