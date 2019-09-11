@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sellfeed.account.AccountDao;
 import com.sellfeed.account.AccountLogic;
 
 @Service

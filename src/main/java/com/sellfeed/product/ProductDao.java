@@ -16,25 +16,28 @@ public class ProductDao {
 	int result =0;
 	@Autowired
 	public SqlSessionTemplate sqlSessionTemplate = null;
-//��	Select
+//★	Select
 	public List<Map<String, Object>> productList(Map<String, Object> pMap) {
 		logger.info("ProductDao| Call productList");
 		List<Map<String,Object>> productList = null;
 		productList = sqlSessionTemplate.selectList("productList",pMap);
-		return null;
+		return productList;
 	}
-//��	Insert
+//★	Insert
 	public int ProductIns(Map<String, Object> pMap) {
 		logger.info("ProductDao| Call productIns");
-		result = sqlSessionTemplate.selectOne("productIns",pMap);
+		sqlSessionTemplate.selectOne("productIns",pMap);
+		String a = pMap.get("result").toString();
+		logger.info(a);
+	//	logger.info("@@@@@@@@@@@@@@@@@@@gohome :"+gohome);
 		return result;
 	}
-//��	Update
+//★	Update
 	public int productUpd(Map<String, Object> pMap) {
 		result = sqlSessionTemplate.update("productUpd",pMap);
 		return result;
 	}
-//��	Delete
+//★	Delete
 	public int productDel(Map<String, Object> pMap) {
 		logger.info("ProductDao| Call productDel");
 		result = sqlSessionTemplate.delete("productDel",pMap);

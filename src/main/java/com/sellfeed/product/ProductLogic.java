@@ -22,7 +22,6 @@ public class ProductLogic {
 		return productList;
 	}
 	
-	//�Ź�, �������, ������� Insert
 	public int productIns(Map<String, Object> pMap) {
 		logger.info("Logic| Call ProductIns");
 		result = productDao.ProductIns(pMap);
